@@ -5,7 +5,7 @@ function validateNameFields(field,fieldName,errorDivId){
     let pattern= /^([A-Za-z]{2,255})$/;
 
     if(field == ""){
-        document.getElementById(errorDivId).innerHTML="Please enter your "+fieldName+"...";
+        document.getElementById(errorDivId).innerHTML="Required";
         state=false;
     }else if(!pattern.test(field)){
         document.getElementById(errorDivId).innerHTML="Please enter valid "+fieldName+"...";
@@ -22,10 +22,10 @@ function validateNameFields(field,fieldName,errorDivId){
 function validateContactNumber(field,fieldName,errorDivId){
 
     let state=true;
-    let pattern= /^([0][7][0-9]{1}[0-9]{7})$/;
+    let pattern= /^([0][0-9][0-9]{1}[0-9]{7})$/;
 
     if(field == ""){
-        document.getElementById(errorDivId).innerHTML="Please enter your "+fieldName+"...";
+        document.getElementById(errorDivId).innerHTML="Required";
         state=false;
     }else if(!pattern.test(field)){
         document.getElementById(errorDivId).innerHTML="Please enter valid "+fieldName+"...";
@@ -43,10 +43,10 @@ function validateContactNumber(field,fieldName,errorDivId){
 function validateAddress(field,fieldName,errorDivId){
 
     let state=true;
-    let pattern= /^([A-Za-z0-9/\\ #&""()--\n]{5,255})$/;
+    let pattern= /^([A-Za-z0-9/\\ #&""()--\n]{1,255})$/;
 
     if(field == ""){
-        document.getElementById(errorDivId).innerHTML="Please enter your "+fieldName+"...";
+        document.getElementById(errorDivId).innerHTML="Required";
         state=false;
     }else if(!pattern.test(field)){
         document.getElementById(errorDivId).innerHTML="Please enter valid "+fieldName+"...";
@@ -66,7 +66,7 @@ function validateEmail(field,fieldName,errorDivId){
     let pattern= /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     
     if(field == ""){
-        document.getElementById(errorDivId).innerHTML="Please enter your "+fieldName+"...";
+        document.getElementById(errorDivId).innerHTML="Required";
         state=false;
     }else if(!pattern.test(field)){
         document.getElementById(errorDivId).innerHTML="Please enter valid "+fieldName+"...";
@@ -84,7 +84,7 @@ function validateUserType(field,fieldName,errorDivId){
     let state =true;
 
     if(field == "" || field == null){
-        document.getElementById(errorDivId).innerHTML="Please select your "+fieldName+"...";
+        document.getElementById(errorDivId).innerHTML="Required";
         state=false;
     }else{
         document.getElementById(errorDivId).innerHTML="";
